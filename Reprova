@@ -1,0 +1,26 @@
+using static System.Console;
+double n1, n2, media;
+WriteLine("Digite a 1° nota");
+n1 = Convert.ToDouble(ReadLine());
+WriteLine("Digite a 2° nota");
+n2 = Convert.ToDouble(ReadLine());
+media = (n1 + n2) / 2;
+if (media == 10)
+{
+    WriteLine("Aprovado com média {0}", media);
+    ForegroundColor = ConsoleColor.Green;
+    WriteLine("Aprovado com distinção.");
+}
+else if (media >= 7)
+{
+    WriteLine("Aprovado com média {0}", media);
+    ForegroundColor = ConsoleColor.Green;
+    WriteLine("Aprovado.");
+}
+else
+{
+    WriteLine("Reprovado com média {0}", media);
+    ForegroundColor = ConsoleColor.Red;
+    WriteLine("Reprovado.");
+}
+ReadKey();
